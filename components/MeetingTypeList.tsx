@@ -162,7 +162,9 @@ const MeetingTypeList = () => {
         title="Type the link here"
         className="text-center"
         buttonText="join Meeting"
-        handleClick={() => (window.location.href = values.link)}
+        handleClick={() =>
+          router.push(values.link.split(process.env.NEXT_PUBLIC_BASE_URL!)[1] || "/not-found")
+        }
       >
         <Input
           placeholder="Meeting link"
