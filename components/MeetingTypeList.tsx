@@ -162,7 +162,7 @@ const MeetingTypeList = () => {
         title="Type the link here"
         className="text-center"
         buttonText="join Meeting"
-        handleClick={() => router.push(values.link)}
+        handleClick={() => (window.location.href = values.link)}
       >
         <Input
           placeholder="Meeting link"
